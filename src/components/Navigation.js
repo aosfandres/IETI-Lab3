@@ -18,6 +18,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import Task from './Task';
+import Container from '@material-ui/core/Container';
 
 const drawerWidth = 240;
 
@@ -91,16 +93,16 @@ export default function Navigation(props) {
     const handleDrawerClose = () => {
         setOpen(false);
     };
-    const logout=()=>{
-        localStorage.setItem('isLoggedIn','false');
+    const logout = () => {
+        localStorage.setItem('isLoggedIn', 'false');
         //alert("asdasd   ")
         props.logout();
 
     }
 
-    return (
+    return (<div >
         <div className={classes.root}>
-            
+
             <CssBaseline />
             <AppBar
                 position="fixed"
@@ -141,46 +143,51 @@ export default function Navigation(props) {
                 <List>
                     {[localStorage.getItem('user')].map((text, index) => (
                         <ListItem button key={text}>
-                            <ListItemIcon><PersonIcon style={{ fontSize: 50 }}/></ListItemIcon>
-                            <ListItemText 
-                            primary={text}
-                            secondary={
-                                <div>
-                                    <Typography
-                                        component="span"
-                                        variant="body2"
-                                        color="textPrimary"
-                                    >andres@andres.com
+                            <ListItemIcon><PersonIcon style={{ fontSize: 50 }} /></ListItemIcon>
+                            <ListItemText
+                                primary={text}
+                                secondary={
+                                    <div>
+                                        <Typography
+                                            component="span"
+                                            variant="body2"
+                                            color="textPrimary"
+                                        >andres@andres.com
                                     </Typography>
-                                </div>
-                        }/>
-                            
-                            
+                                    </div>
+                                } />
+
+
                         </ListItem>
                     ))}
                 </List>
                 <Divider />
                 <List>
-                <ListItem onClick={logout}  button>
-                    <ListItemIcon>
-                        <PersonIcon style={{ fontSize: 50 }}/>
-                    </ListItemIcon>
-                    <ListItemText
-                        primary="Log Out"
-                    />
-                </ListItem>
-            </List>
+                    <ListItem onClick={logout} button>
+                        <ListItemIcon>
+                            <PersonIcon style={{ fontSize: 50 }} />
+                        </ListItemIcon>
+                        <ListItemText
+                            primary="Log Out"
+                        />
+                    </ListItem>
+                </List>
             </Drawer>
-            <main
-                className={clsx(classes.content, {
-                    [classes.contentShift]: open,
-                })}
-            >
-                <div className={classes.drawerHeader} />
-                <Typography>HELLOOOOOO</Typography>
-               
-            </main>
+            <br></br>
+
 
         </div >
+        <br /><br /><br />
+        <Container maxWidth="xs">
+
+            <Task description="Hacer lo hacible " responsible="Andres Sotelo" status="ready" dueDate="156464645646" />
+            <Task description="Comer lo comible " responsible="Andres Sotelo" status="ready" dueDate="156464645646" />
+            <Task description="Dormir durmiendo" responsible="Andres Sotelo" status="ready" dueDate="156464645646" />
+            <Task description="trabajar lo trabajable " responsible="Andres Sotelo" status="ready" dueDate="156464645646" />
+            <Task description="Pensar lo pensable " responsible="Andres Sotelo" status="ready" dueDate="156464645646" />
+            <Task description="Beber lo beblible " responsible="Andres Sotelo" status="ready" dueDate="156464645646" />
+            <Task description="Hacer lo posible " responsible="Andres Sotelo" status="ready" dueDate="156464645646" />
+
+        </Container></div >
     );
 }
