@@ -4,7 +4,7 @@ Andres Orlando Sotelo Fajardo
 #USO 
 - clone el repo
 - usar ```npm install```
-- visitar http://localhost:3000/ 
+- visitar http://localhost:3000/ o visitar [![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://task-plannerbyasof.herokuapp.com/)
 - usuario : andres
 - password : sotelo
 
@@ -24,6 +24,7 @@ Andres Orlando Sotelo Fajardo
 ![](https://github.com/aosfandres/IETI-Lab3/blob/main/images/7.PNG)
 
 #DESPLIEGUE
+
 [![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://task-plannerbyasof.herokuapp.com/)
 
 - EL DESPLIEGUE EN AZURE NO FUE EFECTIVO, DEJO EVIDENCIA
