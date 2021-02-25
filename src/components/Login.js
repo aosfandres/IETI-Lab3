@@ -32,12 +32,13 @@ export default class Login extends React.Component {
   }
 
   handleLoginChange = (e) => {
-    //e.preventDefault();
+    e.preventDefault();
     if (this.state.user === localStorage.getItem('user') && this.state.pass === localStorage.getItem('pass')) {
       //alert("jelou");
-      this.props.settrue();
+      //this.props.settrue();
+      this.props.changeView();
       localStorage.setItem('isLoggedIn', 'true');
-      //alert(localStorage.getItem('isLoggedIn'));
+           //alert(localStorage.getItem('isLoggedIn'));
     }
   }
 
@@ -57,7 +58,7 @@ export default class Login extends React.Component {
               required
               fullWidth
               id="user"
-              label="User name"
+              label="andres"
               name="user"
               autoComplete="user"
               onChange={this.handleUserChange}
@@ -68,7 +69,7 @@ export default class Login extends React.Component {
               required
               fullWidth
               name="password"
-              label="Password"
+              label="sotelo"
               type="password"
               id="password"
               onChange={this.handlePasswordChange}

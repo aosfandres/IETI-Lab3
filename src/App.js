@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import App2 from './App2';
 import Login from "./components/Login";
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route,Redirect } from 'react-router-dom';
+import Navigation from './components/Navigation';
 
 
 class App extends React.Component {
@@ -22,30 +22,42 @@ class App extends React.Component {
   changeStateTrue = () => {
     this.setState({ isLoggedIn: 'true' })
   }
-  changeIsLoggened=()=>{
-    localStorage.setItem('isLoggedIn','flase');
-    alert(localStorage.getItem('isLoggedIn'));
-  }
+
   render() {
+    const changeView=()=>{
+      //window.location.href = "/navigation";
+      this.setState({ isLoggedIn: 'true' });
+     
+      
+    }
+    const logout=()=>{
+        window.location.href = "/";
+        this.changeStateFalse();
+    }
+      
+    
     const LoginView = () => (
       <div>
-        <Login setfalse={this.changeStateFalse} settrue={this.changeStateTrue}/>
-        <App2 /></div>
+       
+        <Login changeView={changeView} />
+       
+        </div>
     );
 
     const normalView = () => (
-      <div ><h1>truuuuue</h1></div>
+      <Navigation logout={logout} />
     );
 
     return (
       <Router>
-        <div className="App">
-
-          <div>
+        
+        <Switch>
+         
             {this.state.isLoggedIn === 'false' ? <Route exact path="/" component={LoginView} />:
-              <Route path="/" component={normalView} /> } 
-          </div>
-        </div>
+              <div><Route path="/navigation" component={normalView} /> <Redirect
+              from="/" to="/navigation" /></div>} 
+        </Switch>
+        
       </Router>
     );
   }
