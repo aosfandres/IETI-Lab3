@@ -1,3 +1,42 @@
+# TASK PLANNER IETI
+Andres Orlando Sotelo Fajardo
+
+#USO 
+- clone el repo
+- usar ```npm install```
+- visitar http://localhost:3000/ 
+- usuario : andres
+- password : sotelo
+
+
+![](https://github.com/aosfandres/IETI-Lab3/blob/main/images/1.PNG)
+
+![](https://github.com/aosfandres/IETI-Lab3/blob/main/images/2.PNG)
+
+![](https://github.com/aosfandres/IETI-Lab3/blob/main/images/3.PNG)
+
+![](https://github.com/aosfandres/IETI-Lab3/blob/main/images/4.PNG)
+
+![](https://github.com/aosfandres/IETI-Lab3/blob/main/images/5.PNG)
+
+![](https://github.com/aosfandres/IETI-Lab3/blob/main/images/6.PNG)
+
+![](https://github.com/aosfandres/IETI-Lab3/blob/main/images/7.PNG)
+
+#DESPLIEGUE
+[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://task-plannerbyasof.herokuapp.com/)
+
+- EL DESPLIEGUE EN AZURE NO FUE EFECTIVO, DEJO EVIDENCIA
+- El pipeline quedo creado en azure devOps
+
+![](https://github.com/aosfandres/IETI-Lab3/blob/main/images/dev.PNG)
+
+- Error de azure
+
+![](https://github.com/aosfandres/IETI-Lab3/blob/main/images/error1.PNG)
+
+por este error no fue posible desplegar la aplicacion en azure
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
